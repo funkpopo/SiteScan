@@ -136,7 +136,7 @@ def main():
     # 取端口
     top = None
     # 目标IP
-    ip = "127.0.0.1"
+    ip = "Target IP Address"
     port_list = port_scner.get_port_lists(top)
 
     # print(port_list)
