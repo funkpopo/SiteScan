@@ -61,5 +61,5 @@ class Dirscan():
 
 
 if __name__ == '__main__':
-    obj = Dirscan('https://www.cyberis.fun')
+    obj = Dirscan('target site')
     obj.SetProcess()
