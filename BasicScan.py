@@ -61,5 +61,5 @@ class Dirscan():
 
 
 if __name__ == '__main__':
-    obj = Dirscan('target site')
+    obj = Dirscan('Target Site')
     obj.SetProcess()
