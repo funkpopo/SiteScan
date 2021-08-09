@@ -4,7 +4,7 @@ import asyncio
 from multiprocessing import Process, Queue, Manager
 
 
-class Dirscan():
+class Dirscan:
     def __init__(self, target):
         self.target = target
         self.targetmd5 = ''
@@ -33,7 +33,7 @@ class Dirscan():
         task = loop.create_task(self.main(self.target))
         status, self.targetmd5 = loop.run_until_complete(task)
 
-        while self.allqueue.empty() != True:
+        while not self.allqueue.empty():
             tmp = self.allqueue.get()
             task = loop.create_task(self.main(tmp))
             try:
@@ -41,7 +41,7 @@ class Dirscan():
                       end='')
                 status, mad5 = loop.run_until_complete(task)
                 # print('bad : '+tmp)
-                if ((status == 200) and (mad5 != self.targetmd5)):
+                if (status == 200) and (mad5 != self.targetmd5):
                     print('OK : ' + tmp)
                     self.Ansdomain.append(tmp)
             except Exception as e:
@@ -61,5 +61,5 @@ class Dirscan():
 
 
 if __name__ == '__main__':
-    obj = Dirscan('Target Site')
+    obj = Dirscan('https://www.baidu.com/')
     obj.SetProcess()
