@@ -26,13 +26,13 @@ class PortScaner(object):
                 try:
                     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     s.settimeout(timeout)
-                    result_code = s.connect_ex((ip, port))  # 开放放回0
+                    result_code = s.connect_ex((ip, port))
                     if result_code == 0:
                         # print(OPEN_MSG % port) # print不适合多线程
                         sys.stdout.write(OPEN_STATUS % port)
                         # result_list.append(port)
                     # else:
-                    #     sys.stdout.write("% 6d [CLOSED]\n" % port)
+                    # sys.stdout.write("% 6d [CLOSED]\n" % port)
                 except Exception as e:
                     print(e)
                 finally:
