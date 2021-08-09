@@ -11,6 +11,7 @@ class Dirscan:
         self.target = target
         self.targetmd5 = ''
         self.allqueue = Queue()
+        # 字典文件
         # self.urlpath = r'../dictionary/asp.txt'
         # self.urlpath = r'../dictionary/aspx.txt'
         # self.urlpath = r'../dictionary/dir.txt'
@@ -24,9 +25,10 @@ class Dirscan:
         # self.urlpath = r'../dictionary/differ-kinds.txt'
         # self.urlpath = r'../dictionary/critical.txt'
         # self.urlpath = r'../dictionary/backups.txt'
-        self.urlpath = r'../dictionary/php.txt'  # 字典文件
+        self.urlpath = r'../dictionary/php.txt'
         self.Ansdomain = Manager().list()
-        self.processnum = 8  # 进程数
+        # 进程数
+        self.processnum = 8
         self.alldictnum = 0
 
     def dicturl(self):
