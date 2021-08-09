@@ -9,7 +9,7 @@ class Dirscan:
         self.target = target
         self.targetmd5 = ''
         self.allqueue = Queue()
-        self.urlpath = r'./dictionary/php.txt'  # 字典文件
+        self.urlpath = r'../dictionary/php.txt'  # 字典文件
         self.Ansdomain = Manager().list()
         self.processnum = 8  # 进程数
         self.alldictnum = 0
