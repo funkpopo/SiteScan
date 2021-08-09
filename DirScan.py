@@ -61,5 +61,6 @@ class Dirscan:
 
 
 if __name__ == '__main__':
+    # 需输入完整域名
     obj = Dirscan('https://www.baidu.com/')
     obj.SetProcess()
