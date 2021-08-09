@@ -124,7 +124,7 @@ class PortScaner(object):
             print("%s:%s" % (domain, e))
 
 
-def main():
+def main(ip):
     # 时间记录
     start_time = time.time()
     port_scner = PortScaner()
@@ -157,4 +157,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    print("Input the IP address: ")
+    target = input()
+    main(target)
