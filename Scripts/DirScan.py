@@ -1,6 +1,8 @@
 import hashlib
 import aiohttp
 import asyncio
+import datetime
+import os
 from multiprocessing import Process, Queue, Manager
 
 
@@ -55,7 +57,7 @@ class Dirscan:
                 status, mad5 = loop.run_until_complete(task)
                 # print('bad : '+tmp)
                 if (status == 200) and (mad5 != self.targetmd5):
-                    print('OK : ' + tmp)
+                    print(' OK : ' + tmp)
                     self.Ansdomain.append(tmp)
             except Exception as e:
                 print(e)
@@ -75,5 +77,7 @@ class Dirscan:
 
 if __name__ == '__main__':
     # 需输入完整域名
-    obj = Dirscan('https://www.baidu.com/')
+    print("Input the domain name: ")
+    target = input()
+    obj = Dirscan(target)
     obj.SetProcess()
