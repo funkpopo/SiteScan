@@ -1,6 +1,5 @@
 import datetime
 import os
-import requests
 
 print("Input the FILENAME with its' PATH: ")
 filename = input()
