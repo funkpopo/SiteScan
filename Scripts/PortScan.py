@@ -6,7 +6,7 @@ import time
 
 
 # 多线程
-class PortScaner(object):
+class PScaner(object):
     class PortScan(threading.Thread):
         def __init__(self, port_queue, ip, timeout=3):
             threading.Thread.__init__(self)
@@ -127,7 +127,7 @@ class PortScaner(object):
 def main(ip):
     # 时间记录
     start_time = time.time()
-    port_scner = PortScaner()
+    port_scner = PScaner()
     # 多线程队列
     port_queue = queue.Queue()
     # 线程数量
