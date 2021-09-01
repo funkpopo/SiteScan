@@ -20,11 +20,11 @@ class Dirscan:
         # self.urlpath = r'../dictionary/mdb.txt'
         # self.urlpath = r'../dictionary/php.txt'
         # self.urlpath = r'../dictionary/shell.txt'
-        self.urlpath = r'../dictionary/top.txt'
+        # self.urlpath = r'../dictionary/top.txt'
         # self.urlpath = r'../dictionary/fingerprints.txt'
         # self.urlpath = r'../dictionary/differ-kinds.txt'
         # self.urlpath = r'../dictionary/critical.txt'
-        # self.urlpath = r'../dictionary/backups.txt'
+        self.urlpath = r'../dictionary/backups.txt'
         # self.urlpath = r'../dictionary/php.txt'
         self.Ansdomain = Manager().list()
         # 进程数
