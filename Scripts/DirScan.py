@@ -18,13 +18,12 @@ class Dirscan:
         # self.urlpath = r'../dictionary/fck.txt'
         # self.urlpath = r'../dictionary/jsp.txt'
         # self.urlpath = r'../dictionary/mdb.txt'
-        # self.urlpath = r'../dictionary/php.txt'
         # self.urlpath = r'../dictionary/shell.txt'
-        # self.urlpath = r'../dictionary/top.txt'
+        self.urlpath = r'../dictionary/top.txt'
         # self.urlpath = r'../dictionary/fingerprints.txt'
         # self.urlpath = r'../dictionary/differ-kinds.txt'
         # self.urlpath = r'../dictionary/critical.txt'
-        self.urlpath = r'../dictionary/backups.txt'
+        # self.urlpath = r'../dictionary/backups.txt'
         # self.urlpath = r'../dictionary/php.txt'
         self.Ansdomain = Manager().list()
         # 进程数
@@ -64,7 +63,7 @@ class Dirscan:
             except Exception as e:
                 print(e)
 
-    def SetProcess(self):
+    def setprocess(self):
         self.dicturl()
         allprocess = []
         for i in range(0, self.processnum):
@@ -82,4 +81,4 @@ if __name__ == '__main__':
     print("Input the domain name: ")
     target = input()
     obj = Dirscan(target)
-    obj.SetProcess()
+    obj.setprocess()
