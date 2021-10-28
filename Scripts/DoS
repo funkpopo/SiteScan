@@ -5,7 +5,7 @@ import threading
 MAX_CONN = 100
 PORT = 80
 HOST = "134.24.21.5"
-PAGE = "/DVWA"
+PAGE = "/index"
 buf = ("GET %s HTTP/1.1\r\n"
        "Host: %s\r\n"
        "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0\r\n"
